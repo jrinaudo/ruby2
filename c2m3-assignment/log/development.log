@@ -1,0 +1,566 @@
+  [1m[36m (10.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (6.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTodoItems (20180524193431)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "todo_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "due_date" date, "title" varchar, "description" varchar, "completed" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180524193431"]]
+  [1m[35m (8.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTodoItems (20180524193431)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "todo_items"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180524193431"]]
+  [1m[35m (9.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTodoItems (20180524193431)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "todo_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "due_date" date, "title" varchar, "description" text, "completed" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180524193431"]]
+  [1m[36m (21.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (9.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (7.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateTodoItems (20180524193431)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "todo_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "due_date" date, "title" varchar, "description" text, "completed" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180524193431"]]
+  [1m[35m (8.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mTodoItem Load (0.4ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 1"], ["due_date", "2018-05-24"], ["description", "very important task TEST"], ["completed", "f"], ["created_at", "2018-05-24 19:46:19.774084"], ["updated_at", "2018-05-24 19:46:19.774084"]]
+  [1m[36m (10.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["due_date", "2018-05-22"], ["description", "learn ruby TEST"], ["completed", "t"], ["created_at", "2018-05-24 19:46:19.787801"], ["updated_at", "2018-05-24 19:46:19.787801"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todo_items" ("title", "due_date", "description", "completed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Task 3"], ["due_date", "2018-05-21"], ["description", "learn Active Record TEST"], ["completed", "t"], ["created_at", "2018-05-24 19:46:19.799534"], ["updated_at", "2018-05-24 19:46:19.799534"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 181.164.124.59 at 2018-05-24 19:49:12 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 32ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 19:49:31 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 557ms (Views: 553.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/scaffolds.self-1aea61231259b88b36afc90ff0a88a814b8d819e878bb62ed33fe778400ffaf1.css?body=1" for 181.164.124.59 at 2018-05-24 19:49:32 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/todo_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 181.164.124.59 at 2018-05-24 19:49:32 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 181.164.124.59 at 2018-05-24 19:49:32 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 181.164.124.59 at 2018-05-24 19:49:32 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 181.164.124.59 at 2018-05-24 19:49:32 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 181.164.124.59 at 2018-05-24 19:49:32 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/todo_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 181.164.124.59 at 2018-05-24 19:49:32 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 181.164.124.59 at 2018-05-24 19:49:32 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/todo_items/new" for 181.164.124.59 at 2018-05-24 19:50:12 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (61.1ms)
+  Rendered todo_items/new.html.erb within layouts/application (67.4ms)
+Completed 200 OK in 119ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_items" for 181.164.124.59 at 2018-05-24 19:50:18 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D2KXZDDIJdhcAJwkW4o0PCaOfb1UkzbSujwzdtEDEhMg4V8+n/TKLmpkGfpmnVK0UNVJyNo5I3UeIqzIUHjyGw==", "todo_item"=>{"due_date(1i)"=>"2018", "due_date(2i)"=>"5", "due_date(3i)"=>"24", "title"=>"fsdf", "description"=>"dsfs", "completed"=>"0"}, "commit"=>"Create Todo item"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "todo_items" ("title", "description", "completed", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "fsdf"], ["description", "dsfs"], ["completed", "f"], ["due_date", "2018-05-24"], ["created_at", "2018-05-24 19:50:18.775760"], ["updated_at", "2018-05-24 19:50:18.775760"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://ruby-on-rails-juanmarinaudo.c9users.io/todo_items/4
+Completed 302 Found in 16ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/todo_items/4" for 181.164.124.59 at 2018-05-24 19:50:19 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTodoItem Load (0.4ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered todo_items/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 50ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 19:51:06 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_items/new" for 181.164.124.59 at 2018-05-24 19:51:07 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (4.6ms)
+  Rendered todo_items/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:03:49 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.6ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/todo_items/new" for 181.164.124.59 at 2018-05-24 20:03:54 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (4.7ms)
+  Rendered todo_items/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_items" for 181.164.124.59 at 2018-05-24 20:03:57 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLTx5i8nbLG/PUNLmQ2fkJ1Cu6dRTD2Ld+nSOT5WiwKnNzm8gBuDR4lZxpWkGvkY6xmP0t/mKCzT902Hvy1rCg==", "todo_item"=>{"due_date(1i)"=>"2018", "due_date(2i)"=>"5", "due_date(3i)"=>"24", "title"=>"aa", "description"=>"aa", "completed"=>"0"}, "commit"=>"Create Todo item"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "todo_items" ("title", "description", "completed", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "aa"], ["description", "aa"], ["completed", "f"], ["due_date", "2018-05-24"], ["created_at", "2018-05-24 20:03:57.865496"], ["updated_at", "2018-05-24 20:03:57.865496"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://ruby-on-rails-juanmarinaudo.c9users.io/todo_items
+Completed 302 Found in 15ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:03:58 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.4ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/todo_items/5" for 181.164.124.59 at 2018-05-24 20:04:02 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zK6jaftczz6yk9seORudPld6H7gaHJtxjJHS0s58I6XjLWszVGAgyIT3XsAEDPu2ISErzZS2jtYoj01sTwfDrQ==", "id"=>"5"}
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "todo_items" WHERE "todo_items"."id" = ?[0m  [["id", 5]]
+  [1m[35m (10.2ms)[0m  commit transaction
+Redirected to https://ruby-on-rails-juanmarinaudo.c9users.io/todo_items
+Completed 302 Found in 16ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:04:02 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:04:47 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.4ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_items/new" for 181.164.124.59 at 2018-05-24 20:08:27 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#new as HTML
+  Rendered todo_items/_form.html.erb (9.2ms)
+  Rendered todo_items/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_item/1/edit" for 181.164.124.59 at 2018-05-24 20:08:40 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/todo_item/1/edit"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.1ms)
+
+
+Started GET "/todo_item/1" for 181.164.124.59 at 2018-05-24 20:08:51 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/todo_item/1"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.1ms)
+
+
+Started GET "/todo_items/1/edit" for 181.164.124.59 at 2018-05-24 20:09:01 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoItem Load (2.4ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered todo_items/_form.html.erb (4.0ms)
+  Rendered todo_items/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:09:05 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT("todo_items"."completed") FROM "todo_items"
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT({:completed=>true}) FROM "todo_items"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT({:completed=>:true}) FROM "todo_items"
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT({:completed=>:true}) FROM "todo_items"[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "true"]]
+
+
+Started GET "/todo_items/1/edit" for 181.164.124.59 at 2018-05-24 20:12:55 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered todo_items/_form.html.erb (4.9ms)
+  Rendered todo_items/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 38ms (Views: 28.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/todo_items/1" for 181.164.124.59 at 2018-05-24 20:12:58 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered todo_items/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:12:59 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_items/1" for 181.164.124.59 at 2018-05-24 20:13:00 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered todo_items/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_items/1/edit" for 181.164.124.59 at 2018-05-24 20:13:02 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered todo_items/_form.html.erb (5.7ms)
+  Rendered todo_items/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/todo_items/1" for 181.164.124.59 at 2018-05-24 20:13:04 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5SGwfYwpEIgXBOiIAjvlrCk2wNTwS4GiGbeuwN83c4vKongnIxX/fiFgbVY/LIMkX230oX7hlAW9qTF+XkyTgw==", "todo_item"=>{"due_date(1i)"=>"2018", "due_date(2i)"=>"5", "due_date(3i)"=>"24", "title"=>"Task 1", "description"=>"very important task TEST", "completed"=>"1"}, "commit"=>"Update Todo item", "id"=>"1"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "todo_items" SET "completed" = ?, "updated_at" = ? WHERE "todo_items"."id" = ?  [["completed", "t"], ["updated_at", "2018-05-24 20:13:04.412766"], ["id", 1]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://ruby-on-rails-juanmarinaudo.c9users.io/todo_items/1
+Completed 302 Found in 17ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/todo_items/1" for 181.164.124.59 at 2018-05-24 20:13:04 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered todo_items/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "true"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "true"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT({:completed=>:true}) FROM "todo_items"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT({:conditions=>"completed = true"}) FROM "todo_items"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT({:conditions=>":completed :true"}) FROM "todo_items"[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT({:conditions=>"completed: :true"}) FROM "todo_items"
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT({:conditions=>{:completed=>:true}}) FROM "todo_items"[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT({:conditions=>"completed = true"}) FROM "todo_items"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "true"]]
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:22:44 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `get_completed' for #<Class:0x00000005310920>):
+  app/controllers/todo_items_controller.rb:8:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.9ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:23:43 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "true"]]
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 33ms (Views: 27.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/todo_items/2" for 181.164.124.59 at 2018-05-24 20:23:52 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoItem Load (0.4ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered todo_items/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_items/2/edit" for 181.164.124.59 at 2018-05-24 20:23:55 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered todo_items/_form.html.erb (4.3ms)
+  Rendered todo_items/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/todo_items/2" for 181.164.124.59 at 2018-05-24 20:23:57 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d8fbcIlCWWwUzBHs3Xh49YL+keLzXtYMTSG/MfK699xYRBMqJn62miKolDLgbx599KWll330w6vpPyCPc8EX1A==", "todo_item"=>{"due_date(1i)"=>"2018", "due_date(2i)"=>"5", "due_date(3i)"=>"22", "title"=>"Task 2", "description"=>"learn ruby TEST", "completed"=>"0"}, "commit"=>"Update Todo item", "id"=>"2"}
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "todo_items" SET "completed" = ?, "updated_at" = ? WHERE "todo_items"."id" = ?[0m  [["completed", "f"], ["updated_at", "2018-05-24 20:23:57.785520"], ["id", 2]]
+  [1m[35m (9.9ms)[0m  commit transaction
+Redirected to https://ruby-on-rails-juanmarinaudo.c9users.io/todo_items/2
+Completed 302 Found in 16ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/todo_items/2" for 181.164.124.59 at 2018-05-24 20:23:58 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered todo_items/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:24:00 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "true"]]
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:24:17 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "true"]]
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:24:29 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "true"]]
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:24:45 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "true"]]
+  [1m[36mTodoItem Load (0.4ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "true"]]
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:25:19 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "true"]]
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT "todo_items".* FROM "todo_items"[0m
+  Rendered todo_items/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/todo_items/4" for 181.164.124.59 at 2018-05-24 20:25:22 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered todo_items/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_items/4/edit" for 181.164.124.59 at 2018-05-24 20:25:23 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTodoItem Load (0.2ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered todo_items/_form.html.erb (3.8ms)
+  Rendered todo_items/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/todo_items/4" for 181.164.124.59 at 2018-05-24 20:25:25 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"60jO5cpKYH/yS/3ob1qyPwTylQc1G3zTG1Myir0UiV7Eywa/ZXaPicQveDZSTdS3cqmhcruxaXS/Ta00PG9pVg==", "todo_item"=>{"due_date(1i)"=>"2018", "due_date(2i)"=>"5", "due_date(3i)"=>"24", "title"=>"fsdf", "description"=>"dsfs", "completed"=>"1"}, "commit"=>"Update Todo item", "id"=>"4"}
+  [1m[35mTodoItem Load (0.2ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "todo_items" SET "completed" = ?, "updated_at" = ? WHERE "todo_items"."id" = ?  [["completed", "t"], ["updated_at", "2018-05-24 20:25:25.260650"], ["id", 4]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://ruby-on-rails-juanmarinaudo.c9users.io/todo_items/4
+Completed 302 Found in 15ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/todo_items/4" for 181.164.124.59 at 2018-05-24 20:25:25 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered todo_items/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:25:26 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "true"]]
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/todo_items" for 181.164.124.59 at 2018-05-24 20:25:29 +0000
+Cannot render console from 181.164.124.59! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodoItemsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "true"]]
+  [1m[35mTodoItem Load (0.3ms)[0m  SELECT "todo_items".* FROM "todo_items"
+  Rendered todo_items/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "true"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT("todo_items"."completed") FROM "todo_items"[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT({:completed=>true}) FROM "todo_items"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT({:completed=>:true}) FROM "todo_items"[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT({:conditions=>"completed = true"}) FROM "todo_items"
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(completed = true) FROM "todo_items"[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "todo_items"
+  [1m[36mTodoItem Load (0.5ms)[0m  [1mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."completed" = ?[0m  [["completed", "true"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "true"]]
+  [1m[36mTodoItem Load (0.3ms)[0m  [1mSELECT  "todo_items".* FROM "todo_items"  ORDER BY "todo_items"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "todo_items" WHERE "todo_items"."completed" = ?  [["completed", "t"]]
